@@ -25,7 +25,7 @@ SECRET_KEY = 'i!vp3!w3&+e0_cvd1@w)c5ecld^hloi(x!ytz&%-hey46gvq7o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['astaroth.pythonanywhere.com']
 
 
 # Application definition
