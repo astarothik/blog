@@ -104,3 +104,17 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# # ckeditor
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_URL = '/media/'
+# CKEDITOR_UPLOAD_PATH = 'uploads/'
+#
+# CKEDITOR_CONFIGS = {
+#     'default': {
+#         'toolbar': [['Source', 'Link', 'Unlink', 'SpecialChar', 'Image', 'CodeSnippet']],
+#         'height': 400,
+#         'width': 900,
+#         'removePlugins': 'stylesheetparser',
+#         'extraPlugins': 'codesnippet',
+#     },
+# }
