@@ -20,7 +20,7 @@
             </a>
             <a href="{% url 'post_detail' pk=post.pk %}" class="descriptor-count">Высказалось {{ post.approved_comments.count }} человек</a>
                 {% if user.is_authenticated %}
-                   ( {{ post.comments.count }})
+                   ({{ post.comments.count }})
                 {% endif %}
             <br><a class="btn btn-default btn-comment" href="{% url 'add_comment_to_post' pk=post.pk %}">
                 Высказаться
