@@ -1,15 +1,17 @@
 <html>
 <head>
     <title>Main blog</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 </head>
 <body>
-    {% for post in posts %}
-        <div>
+{% for post in posts %}
+    <div>
 
-            <h1><a href="">{{ post.title }}</a></h1>
-            <p>published: {{ post.published_date }}</p>
-            <p>{{ post.text }}</p>
-        </div>
-    {% endfor %}
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>published: {{ post.published_date }}</p>
+        <p>{{ post.text }}</p>
+    </div>
+{% endfor %}
 </body>
 </html>
