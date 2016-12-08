@@ -3,8 +3,12 @@ body {
 }
 
 h2 a, h1 {
-        color: darkred;
+    color: darkred;
 }
+
 .post {
     padding: 15px;
+}
+h1 {
+    font-family: 'Lobster';
 }
