@@ -2,6 +2,6 @@ body {
     background: #24b060;
 }
 
-h1 a {
-        color: darkred;
-    }
+h1 a, h2 {
+    color: darkred;
+}
