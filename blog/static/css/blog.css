@@ -2,7 +2,7 @@ body {
     background: #24b060;
 }
 
-h2 a, h1 {
+h2, h1 {
     color: darkred;
 }
 
@@ -12,4 +12,24 @@ h2 a, h1 {
 }
 h1 {
     font-family: 'Lobster';
+}
+
+a:hover{
+    text-decoration: none;
+}
+nav{
+    margin: 25px 0;
+
+}
+.new_post {
+    padding: 20px;
+    background: #cce448;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.post-form textarea{
+    width: 100%;
+}
+.post-form textarea, .post-form input {
+    border-radius: 5px;
 }
