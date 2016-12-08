@@ -11,10 +11,8 @@
 <body>
 <div class="container">
     <h1>Блог Клинова Михаила Сергеевича</h1>
-    {% for post in posts %}
-        {% block content %}
-        {% endblock %}
-    {% endfor %}
+    {% block content %}
+    {% endblock %}
 </div>
 </body>
 </html>
