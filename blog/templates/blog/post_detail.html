@@ -1,9 +1,13 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-    <nav>
-        <a href="{% url 'post_edit' pk=post.pk %}" class="btn_post">Edit</a>
-    </nav>
+    {% if user.is_authenticated %}
+        <nav>
+            <a href="{% url 'post_edit' pk=post.pk %}" class="btn_post">
+                Редактировать
+            </a>
+        </nav>
+    {% endif %}
     <div class="post panel">
         {% if post.published_date %}
             <div class="date">

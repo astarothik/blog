@@ -1,11 +1,15 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-    <div class="list-post">
+    {% if user.is_authenticated %}
         <nav>
-            <a href="{% url 'blog.views.post_new' %}" class="btn_post"><span class="glyphicon glyphicon-plus"></span>Добавить
-                запись</a>
+            <a href="{% url 'blog.views.post_new' %}" class="btn_post">
+                <span class="glyphicon glyphicon-plus"></span>
+                Добавить запись
+            </a>
         </nav>
+    {% endif %}
+    <div class="list-post">
         {% for post in posts %}
             <a href="{% url 'post_detail' pk=post.pk %}">
                 <div class="post panel">
