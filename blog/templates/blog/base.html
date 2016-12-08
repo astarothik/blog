@@ -10,11 +10,7 @@
 </head>
 <body>
 <div class="container">
-    <a href="/"><h1>Блог Клинова Михаила Сергеевича</h1></a>
-    <nav>
-        <a href="{% url 'blog.views.post_new' %}" class="new_post"><span class="glyphicon glyphicon-plus"></span>Добавить
-            запись</a>
-    </nav>
+    <a href="/"><h1>Блог</h1></a>
     {% block content %}
     {% endblock %}
 </div>
