@@ -8,15 +8,17 @@
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 </head>
 <body>
-{% for post in posts %}
-    <div>
-        <div class="container">
-            <h1>Блог Клинова Михаила Сергеевича</h1>
-        <h2><a href="">{{ post.title }}</a></h2>
-        <p>published: {{ post.published_date }}</p>
-        <p>{{ post.text }}</p>
+<div class="container">
+    <h1>Блог Клинова Михаила Сергеевича</h1>
+    {% for post in posts %}
+        <div class="list-post">
+            <div class="post">
+                <h2><a href="">{{ post.title }}</a></h2>
+                <p>published: {{ post.published_date }}</p>
+                <p>{{ post.text }}</p>
+            </div>
         </div>
-    </div>
-{% endfor %}
+    {% endfor %}
+</div>
 </body>
 </html>
