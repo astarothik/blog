@@ -1,0 +1,20 @@
+{% load staticfiles %}
+
+<html>
+<head>
+    <title>Main blog</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+</head>
+<body>
+<div class="container">
+    <h1>Блог Клинова Михаила Сергеевича</h1>
+    {% for post in posts %}
+        {% block content %}
+        {% endblock %}
+    {% endfor %}
+</div>
+</body>
+</html>

@@ -1,25 +1,11 @@
-{% load staticfiles %}
+{% extends 'blog/base.html' %}
 
-<html>
-<head>
-    <title>Main blog</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-     <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-</head>
-<body>
-<div class="container">
-    <h1>Блог Клинова Михаила Сергеевича</h1>
-    {% for post in posts %}
-        <div class="list-post">
-            <div class="post panel panel-default">
-                <h2><a href="">{{ post.title }}</a></h2>
-                <p>published: {{ post.published_date }}</p>
-                <p>{{ post.text }}</p>
-            </div>
+{% block content %}
+    <div class="list-post">
+        <div class="post panel panel-default">
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>published: {{ post.published_date }}</p>
+            <p>{{ post.text|linebreaksbr }}</p>
         </div>
-    {% endfor %}
-</div>
-</body>
-</html>
+    </div>
+{% endblock content %}
