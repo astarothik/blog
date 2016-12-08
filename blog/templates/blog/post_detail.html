@@ -4,7 +4,7 @@
     {% if user.is_authenticated %}
         <nav>
             <a href="{% url 'post_edit' pk=post.pk %}" class="btn_post">
-                Внести коррективы
+                Хочу добавить
             </a>
         </nav>
     {% endif %}
@@ -24,7 +24,7 @@
                     {{ comment.created_date }}
                     {% if not comment.approved_comment %}
                         <a class="btn btn-default" href="{% url 'comment_remove' pk=comment.pk %}"><span
-                                class="glyphicon glyphicon-remove"></span>Расстрелять</a>
+                                class="glyphicon glyphicon-remove"></span>Высмеивание партийного руководства</a>
                         <a class="btn btn-default" href="{% url 'comment_approve' pk=comment.pk %}"><span
                                 class="glyphicon glyphicon-ok"></span>Принять к исполнению</a>
                     {% endif %}
@@ -33,7 +33,6 @@
                 <p>{{ comment.text|linebreaks }}</p>
             </div>
         {% endif %}
-    {% empty %}
-        <p>Высказываний общественности нет</p>
     {% endfor %}
-{% endblock %}
+        <p>Высказываний общественности нет</p>
+{% endblock  %}

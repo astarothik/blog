@@ -5,7 +5,7 @@
         <nav>
             <a href="{% url 'blog.views.post_new' %}" class="btn_post">
                 <span class="glyphicon glyphicon-plus"></span>
-                Рассказать историю
+                Выдать государственную тайну
             </a>
         </nav>
     {% endif %}
@@ -14,12 +14,11 @@
             <a href="{% url 'post_detail' pk=post.pk %}">
                 <div class="post panel">
                     <h2>{{ post.title }}</h2>
-                    <p>published: {{ post.published_date }}</p>
+                    <p>Тайна выдана: {{ post.published_date }}</p>
                     <p>{{ post.text|linebreaksbr }}</p>
                 </div>
             </a>
-            if {{ post.post.approved_comments.count }}>0
-            <a href="{% url 'post_detail' pk=post.pk %}">Комментариев к записи: {{ post.post.approved_comments.count }}</a><br>
+            <a href="{% url 'post_detail' pk=post.pk %}" class="descriptor-count">Высказалось {{ post.approved_comments.count }} человек</a><br>
             <a class="btn btn-default btn-comment" href="{% url 'add_comment_to_post' pk=post.pk %}">
                 Высказаться
             </a>

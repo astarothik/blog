@@ -1,10 +1,10 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-    <h2>Подшивка в личное дело</h2>
+    <h2>Расскажите все народу</h2>
     <form method="POST" class="post-form">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="btn btn-danger">Завершить историю</button>
+        <button type="submit" class="btn btn-danger">Донести</button>
     </form>
 {% endblock %}
