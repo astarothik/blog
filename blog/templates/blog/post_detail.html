@@ -30,10 +30,14 @@
                         Решение по данному высказыванию
                         </p>
                         <p>
-                            <a class="btn btn-default" href="{% url 'comment_remove' pk=comment.pk %}"><span
-                                    class="glyphicon glyphicon-remove"></span>Расстрелять</a>
-                            <a class="btn btn-default" href="{% url 'comment_approve' pk=comment.pk %}"><span
-                                    class="glyphicon glyphicon-ok"></span>Предать гласности</a>
+                            <a class="btn btn-danger" href="{% url 'comment_remove' pk=comment.pk %}">
+                                <span class="glyphicon glyphicon-remove"></span>
+                                Расстрелять
+                            </a>
+                            <a class="btn btn-success" href="{% url 'comment_approve' pk=comment.pk %}">
+                                <span class="glyphicon glyphicon-ok"></span>
+                                Предать гласности
+                            </a>
                         </p>
                     {% endif %}
                 </div>

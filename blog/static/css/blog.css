@@ -42,3 +42,6 @@ nav{
 .detail_comment {
     background: gainsboro;
 }
+.glyphicon:after {
+    margin-right: 10px;
+}
