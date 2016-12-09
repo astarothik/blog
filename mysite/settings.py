@@ -17,7 +17,6 @@ import django
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
@@ -29,10 +28,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['astaroth.pythonanywhere.com']
 
-
 # Application definition
 
 INSTALLED_APPS = (
+    # 'grappelli',
+    'suit',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,9 +43,8 @@ INSTALLED_APPS = (
     'mathfilters',
     # 'ckeditor',
     # 'solo',
-    'suit_ckeditor',
+    # 'suit_ckeditor',
 )
-
 
 # Suit
 SUIT_CONFIG = {
@@ -76,13 +75,13 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.core.context_processors.request',
             ],
         },
     },
 ]
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
@@ -93,7 +92,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
@@ -108,7 +106,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
@@ -122,3 +119,8 @@ MEDIA_URL = '/media/'
 CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
 # Media
 MEDIA_ROOT = os.path.abspath(os.path.join(BASE_DIR, 'media'))
+#
+# STATICFILES_FINDERS = (
+#     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+#     'django.contrib.staticfiles.finders.FileSystemFinder',
+# )
