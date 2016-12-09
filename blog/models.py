@@ -1,13 +1,14 @@
 from django.db import models
 from django.utils import timezone
-from ckeditor.fields import RichTextField
+# from ckeditor.fields import RichTextField
+# from django import forms
+# from ckeditor.widgets import CKEditorWidget
 
 
 class Post(models.Model):
     author = models.ForeignKey('auth.User')
     title = models.CharField(max_length=50)
-    text = RichTextField()
-    text_new = RichTextField()
+    text = models.TextField()
     created_date = models.DateTimeField(
         default=timezone.now)
     published_date = models.DateTimeField(

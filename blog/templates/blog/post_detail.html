@@ -9,6 +9,10 @@
         </nav>
     {% endif %}
     <div class="post panel">
+        <div class="ya-share2"
+             data-services="vkontakte,facebook,odnoklassniki,gplus,twitter,viber,whatsapp,skype,telegram"
+             data-limit="3">
+        </div>
         {% if post.published_date %}
             <div class="date">
                 {{ post.published_date }}
@@ -21,26 +25,26 @@
 
     {% for comment in post.comments.all %}
         {% if user.is_authenticated or comment.approved_comment %}
-                <div class="panel post detail_comment ">
-                    <p>Высказывание от:{{ comment.created_date }}</p>
-                    <p>Автор: {{ comment.author }}</p>
-                    <p>{{ comment.text|linebreaks }}</p>
-                    {% if not comment.approved_comment %}
-                        <p>
+            <div class="panel post detail_comment ">
+                <p>Высказывание от:{{ comment.created_date }}</p>
+                <p>Автор: {{ comment.author }}</p>
+                <p>{{ comment.text|linebreaks }}</p>
+                {% if not comment.approved_comment %}
+                    <p>
                         Решение по данному высказыванию
-                        </p>
-                        <p>
-                            <a class="btn btn-danger" href="{% url 'comment_remove' pk=comment.pk %}">
-                                <span class="glyphicon glyphicon-remove"></span>
-                                Расстрелять
-                            </a>
-                            <a class="btn btn-success" href="{% url 'comment_approve' pk=comment.pk %}">
-                                <span class="glyphicon glyphicon-ok"></span>
-                                Предать гласности
-                            </a>
-                        </p>
-                    {% endif %}
-                </div>
+                    </p>
+                    <p>
+                        <a class="btn btn-danger" href="{% url 'comment_remove' pk=comment.pk %}">
+                            <span class="glyphicon glyphicon-remove"></span>
+                            Расстрелять
+                        </a>
+                        <a class="btn btn-success" href="{% url 'comment_approve' pk=comment.pk %}">
+                            <span class="glyphicon glyphicon-ok"></span>
+                            Предать гласности
+                        </a>
+                    </p>
+                {% endif %}
+            </div>
         {% endif %}
     {% empty %}
         <p>Высказываний общественности нет</p>

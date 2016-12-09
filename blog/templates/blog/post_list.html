@@ -17,15 +17,18 @@
                     <h2>{{ post.title }}</h2>
                     <p>Тайна выдана: {{ post.published_date }}</p>
                     <p>{{ post.text|linebreaksbr }}</p>
+
                 </div>
+
             </a>
-            <a href="{% url 'post_detail' pk=post.pk %}" class="descriptor-count">Высказалось {{ post.approved_comments.count }} человек</a>
-                {% if user.is_authenticated %}
-                   ({{ post.comments.count|sub:post.approved_comments.count }} ожидают модерации)
-                {% endif %}
+            <a href="{% url 'post_detail' pk=post.pk %}"
+               class="descriptor-count">Высказалось {{ post.approved_comments.count }} человек</a>
+            {% if user.is_authenticated %}
+                ({{ post.comments.count|sub:post.approved_comments.count }} ожидают модерации)
+            {% endif %}
             <br><a class="btn btn-default btn-comment" href="{% url 'add_comment_to_post' pk=post.pk %}">
-                Высказаться
-            </a>
+            Высказаться
+        </a>
             Внимание! Все комментарии проходят проверку у в ЦК
         {% endfor %}
     </div>
