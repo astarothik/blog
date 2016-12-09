@@ -279,7 +279,7 @@
                 return (t.share || {}).share_count || 0
             }
         },
-        
+
         contentOptions: {accessToken: "", appId: "", nextUrl: ""},
         popupDimensions: [800, 520],
         i18n: {
