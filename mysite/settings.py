@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import tempfile
+import django
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -39,8 +41,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'blog',
     'mathfilters',
-    # 'ckeditor',
-    # 'ckeditor_uploader',
+    'ckeditor',
+    'ckeditor_uploader',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -105,17 +107,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-# # ckeditor
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-# MEDIA_URL = '/media/'
-# CKEDITOR_UPLOAD_PATH = 'uploads/'
-#
-# CKEDITOR_CONFIGS = {
-#     'default': {
-#         'toolbar': [['Source', 'Link', 'Unlink', 'SpecialChar', 'Image', 'CodeSnippet']],
-#         'height': 400,
-#         'width': 900,
-#         'removePlugins': 'stylesheetparser',
-#         'extraPlugins': 'codesnippet',
-#     },
-# }
+# ckeditor
+MEDIA_URL = '/media/'
+STATIC_ROOT = os.path.join(tempfile.gettempdir(), 'ck_static')
+MEDIA_ROOT = os.path.join(tempfile.gettempdir(), 'ck_media')
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_IMAGE_BACKEND = "pillow"
+CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'

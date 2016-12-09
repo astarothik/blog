@@ -4,6 +4,7 @@ from .forms import PostForm, CommentForm
 from django.shortcuts import redirect
 from .models import Post, Comment
 from django.contrib.auth.decorators import login_required
+from . import forms
 
 
 def post_list(request):
