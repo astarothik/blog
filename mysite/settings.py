@@ -41,9 +41,16 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'blog',
     'mathfilters',
-    'ckeditor',
-    'ckeditor_uploader',
+    # 'ckeditor',
+    # 'solo',
+    'suit_ckeditor',
 )
+
+
+# Suit
+SUIT_CONFIG = {
+
+}
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -109,9 +116,9 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # ckeditor
 MEDIA_URL = '/media/'
-STATIC_ROOT = os.path.join(tempfile.gettempdir(), 'ck_static')
-MEDIA_ROOT = os.path.join(tempfile.gettempdir(), 'ck_media')
 
-CKEDITOR_UPLOAD_PATH = "uploads/"
-CKEDITOR_IMAGE_BACKEND = "pillow"
+# Static files (CSS, JavaScript, Images)
+
 CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
+# Media
+MEDIA_ROOT = os.path.abspath(os.path.join(BASE_DIR, 'media'))

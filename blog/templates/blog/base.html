@@ -2,21 +2,21 @@
 
 <html>
 <head>
-    <title>Main blog</title>
     <meta property="og:title" content="Тестовый блог"/>
-    
+
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
-    <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
-    <script src="{% static 'js/share.js' %}"></script>
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 
-{#    <meta property="og:image" content="http://allsoft.ru/bitrix/templates/allsoft2011/images/8let/dragon_normal.jpg"/>#}
+    <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script src="{% static 'js/share.js' %}"></script>
 
+    <title>{{ settings_page.name_website }}</title>
 </head>
 <body>
 <div class="container">
+    {{ settings }}
     <a href="/"><h1>Блог Клинова Михаила Сергеевича</h1></a>
     {% block content %}
     {% endblock %}

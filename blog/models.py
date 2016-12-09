@@ -1,9 +1,6 @@
 from django.db import models
 from django.utils import timezone
-# from ckeditor.fields import RichTextField
-# from django import forms
-# from ckeditor.widgets import CKEditorWidget
-
+from solo.models import SingletonModel
 
 class Post(models.Model):
     author = models.ForeignKey('auth.User')
@@ -38,3 +35,14 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.text
+
+class PageSettings(SingletonModel, models.Model):
+    name_website = models.TextField(verbose_name='Название сайта', max_length=20)
+    descriptor_website = models.TextField(verbose_name='Описание сайта', max_length=50)
+    name_list = 'Настройки конфигурации'
+
+    def settingsSave(self):
+        self.save()
+
+    def __str__(self):
+        return self.name_list
