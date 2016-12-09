@@ -39,3 +39,6 @@ nav{
 .descriptor-count {
     color: black;
 }
+.detail_comment {
+    background: gainsboro;
+}

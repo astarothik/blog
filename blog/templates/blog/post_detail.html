@@ -17,24 +17,28 @@
         <h1>{{ post.title }}</h1>
         <p>{{ post.text|linebreaksbr }}</p>
     </div>
+    <h1>Высказывания общественности по данному поводу</h1>
+
     {% for comment in post.comments.all %}
         {% if user.is_authenticated or comment.approved_comment %}
-            <div class="comment">
-                <div class="date">
-                    {{ comment.created_date }}
+                <div class="panel post detail_comment ">
+                    <p>Высказывание от:{{ comment.created_date }}</p>
+                    <p>Автор: {{ comment.author }}</p>
+                    <p>{{ comment.text|linebreaks }}</p>
                     {% if not comment.approved_comment %}
-                        <a class="btn btn-default" href="{% url 'comment_remove' pk=comment.pk %}"><span
-                                class="glyphicon glyphicon-remove"></span>Высмеивание партийного руководства</a>
-                        <a class="btn btn-default" href="{% url 'comment_approve' pk=comment.pk %}"><span
-                                class="glyphicon glyphicon-ok"></span>Предать гласности</a>
+                        <p>
+                        Решение по данному высказыванию
+                        </p>
+                        <p>
+                            <a class="btn btn-default" href="{% url 'comment_remove' pk=comment.pk %}"><span
+                                    class="glyphicon glyphicon-remove"></span>Расстрелять</a>
+                            <a class="btn btn-default" href="{% url 'comment_approve' pk=comment.pk %}"><span
+                                    class="glyphicon glyphicon-ok"></span>Предать гласности</a>
+                        </p>
                     {% endif %}
                 </div>
-                <strong>{{ comment.author }}</strong>
-                <p>{{ comment.text|linebreaks }}</p>
-            </div>
         {% endif %}
     {% empty %}
         <p>Высказываний общественности нет</p>
     {% endfor %}
-
-{% endblock  %}
+{% endblock %}
