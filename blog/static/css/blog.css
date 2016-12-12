@@ -48,3 +48,6 @@ nav{
 .ya-share2 {
     margin-bottom: 15px;
 }
+p {
+    word-wrap: break-word;
+}

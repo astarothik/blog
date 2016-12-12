@@ -13,6 +13,7 @@ urlpatterns = [
     url(r'^comment/(?P<pk>\d+)/remove/$', views.comment_remove, name='comment_remove'),
     url(r'^comment_send/(?P<pk>\d+)/comment_send/$', views.comment_send, name='comment_send'),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
     # url(r'^ckeditor/', include('ckeditor_uploader.urls')),
     # url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {
     #     'document_root': settings.MEDIA_ROOT,
