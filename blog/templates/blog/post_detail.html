@@ -19,7 +19,7 @@
             </div>
         {% endif %}
         <h1>{{ post.title }}</h1>
-        <p>{{ post.text|linebreaksbr }}</p>
+        <p>{{ post.text|linebreaksbr|safe }}</p>
     </div>
     <h1>Высказывания общественности по данному поводу</h1>
 
