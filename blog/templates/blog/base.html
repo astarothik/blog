@@ -1,4 +1,7 @@
+{#{% extends 'blog/footer.html' %}#}
+
 {% load staticfiles %}
+
 
 <html>
 <head>
@@ -19,10 +22,14 @@
 <div class="container">
     {{ settings }}
     <a href="/"><h1>Блог Клинова Михаила Сергеевича</h1></a>
+
     {% block content %}
     {% endblock %}
+
     {% block footer %}
     {% endblock %}
+
+    {% include 'blog/footer.html' %}
 </div>
 
 <noscript>
