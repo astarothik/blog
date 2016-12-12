@@ -6,8 +6,12 @@
 CKEDITOR.editorConfig = function( config ) {
 	// Define changes to default configuration here. For example:
 	// config.language = 'fr';
-	// config.uiColor = '#AADC6E';
+	config.uiColor = '#333';
+	config.textColor = '#fff';
 	config.removePlugins = 'elementspath';
+	config.disableNativeSpellChecker = false;
+	config.allowedContent = true;
 	config.resize_enabled = false;
-	config.extraPlugins = 'autogrow, SimpleLink, SimpleImage';
+	config.skin = 'bootstrapck';
+	config.extraPlugins = 'autogrow, SimpleLink, SimpleImage, smiley';
 };
