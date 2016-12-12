@@ -85,11 +85,7 @@ CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.j
 
 
 CKEDITOR_CONFIGS = {
-    'awesome_ckeditor': {
-        'toolbar': 'Basic',
-    },
-
     'default': {
-            'toolbar': [['Source', 'Link', 'Unlink', 'SpecialChar']],
+            'toolbar': [['Source', 'Link', 'Unlink', 'SpecialChar, Autogrow, SimpleLink, SimpleImage, smiley']],
     },
 }

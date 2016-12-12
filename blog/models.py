@@ -6,7 +6,7 @@ from ckeditor.fields import RichTextField
 class Post(models.Model):
     author = models.ForeignKey('auth.User')
     title = models.CharField(max_length=50)
-    text = RichTextField(config_name='awesome_ckeditor')
+    text = RichTextField(config_name='default')
     created_date = models.DateTimeField(
         default=timezone.now)
     published_date = models.DateTimeField(
