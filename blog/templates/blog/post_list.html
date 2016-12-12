@@ -16,7 +16,7 @@
                 <div class="post panel">
                     <h2>{{ post.title }}</h2>
                     <p>Тайна выдана: {{ post.published_date }}</p>
-                    <p>{{ post.text|truncatechars_html:250 }}</p>
+                    <p>{{ post.text|truncatechars_html:250|safe }}</p>
                 </div>
             </a>
             <a href="{% url 'post_detail' pk=post.pk %}"
