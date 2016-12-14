@@ -24,9 +24,9 @@ INSTALLED_APPS = (
 
     'blog',
     'mathfilters',
-    'ckeditor',
     'sass_processor',
     'pipeline',
+    'suit_ckeditor',
 
 )
 
@@ -121,21 +121,8 @@ SUIT_CONFIG = {
             'models': (
                 'BlogConfig',
                 'BlogPost',
-                'Tag',
                 'page_settings',
             )
-        },
-
-        '-',
-        {
-            'app': 'backups',
-            'icon': 'icon-hdd',
-            'permissions': 'users.admin_menu',
-        },
-        {
-            'app': 'admin',
-            'icon': 'icon-list-alt',
-            'permissions': 'users.admin_menu',
         },
     ),
 }

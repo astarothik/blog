@@ -68,7 +68,6 @@ p {
     flex-direction: column;
     text-align: center;
     clear: both;
-    position: absolute;
     bottom: 0;
 
 }

@@ -8,8 +8,8 @@ from django.contrib.auth.decorators import login_required
 
 
 def settings_list(request):
-    settings_page = PageSettings.objects.all()
-    return render(request, 'blog/base.html', {'settings_page': settings_page})
+    list_settings_page = PageSettings.objects.all()
+    return render(request, 'blog/base.html', {'settings_page': list_settings_page})
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
@@ -55,7 +55,6 @@ def add_comment_to_post(request, pk):
             comment = form.save(commit=False)
             comment.post = post
             comment.save()
-            # return redirect('post_detail', pk=post.pk)
             return render(request, 'blog/comment_send.html', {})
     else:
         form = CommentForm()

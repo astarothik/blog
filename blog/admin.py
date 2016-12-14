@@ -1,7 +1,35 @@
 from django.contrib import admin
 from .models import Post, Comment, PageSettings
 
+from django.db import models
+from suit_ckeditor.widgets import CKEditorWidget
 
-admin.site.register(Post)
+# Посты
+@admin.register(Post)
+class PostAdmin(admin.ModelAdmin):
+    fieldsets = (
+        ('', {
+            'fields': (
+                'title',
+                'text',
+            ),
+        }),
+    )
+    formfield_overrides = {
+        models.TextField: {'widget': CKEditorWidget},
+    }
+
+#  Комментарии
 admin.site.register(Comment)
-admin.site.register(PageSettings)
+
+# Настройки страницы
+@admin.register(PageSettings)
+class PageConfigAdmin(admin.ModelAdmin):
+    fieldsets = (
+        ('', {
+            'fields': (
+                'name_website',
+                'descriptor_website',
+            ),
+        }),
+    )
