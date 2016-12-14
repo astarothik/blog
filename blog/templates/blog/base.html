@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 
 
-
     <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="{% static 'js/bootstrap.js' %}"></script>
@@ -24,29 +23,28 @@
     <script src="{% static 'js/blog.js' %}"></script>
 
 
-
     <title>{{ settings_page }}</title>
 </head>
 <body>
 <div class="container">
     {{ settings_page }}
-<div class="alert alert-danger">
-    <strong>Внимание! Сайт находится в стадии разработки!</strong>
-    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-</div>
-<div class="alert alert-warning">
-    <strong>Внимание! Сайт носит информативно - развлекательный характер!</strong>
-    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-</div>
+    <div class="alert alert-danger">
+        <strong>Внимание! Сайт находится в стадии разработки!</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    </div>
+    <div class="alert alert-warning">
+        <strong>Внимание! Сайт носит информативно - развлекательный характер!</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    </div>
 
     <a href="/"><h1>Блог Клинова Михаила Сергеевича</h1></a>
 
     {% block content %}
     {% endblock %}
 
-    {% include 'blog/footer.html' %}
-</div>
 
+</div>
+{% include 'blog/footer.html' %}
 <noscript>
     <div>
         <img src="https://mc.yandex.ru/watch/41528589" style="position:absolute; left:-9999px;" alt=""/>

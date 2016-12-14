@@ -71,7 +71,10 @@ p {
     bottom: 0;
 
 }
+
 .block-footer {
     display: flex;
     justify-content: center;
+    position: absolute;
+    bottom: 0;
 }
