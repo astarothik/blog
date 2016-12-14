@@ -2,7 +2,7 @@ body {
     background: #24b060;
 }
 
-h2, h1, .footer {
+h2, h1 {
     color: darkred;
 }
 
@@ -69,6 +69,7 @@ p {
     text-align: center;
     clear: both;
     bottom: 0;
+    color: #fefefe
 
 }
 
