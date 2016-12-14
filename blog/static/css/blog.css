@@ -84,5 +84,7 @@ p {
     background: #333;
     clear: both;
     position: fixed;
-    margin-top: 50px;
+}
+.container {
+    margin-bottom: 50px;
 }
