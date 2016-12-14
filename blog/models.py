@@ -3,10 +3,11 @@ from django.utils import timezone
 from solo.models import SingletonModel
 from ckeditor.fields import RichTextField
 
+
 class Post(models.Model):
     author = models.ForeignKey('auth.User')
     title = models.CharField(max_length=50)
-    text = RichTextField(config_name='main')
+    text = RichTextField(config_name='default')
     created_date = models.DateTimeField(
         default=timezone.now)
     published_date = models.DateTimeField(
@@ -48,3 +49,14 @@ class PageSettings(SingletonModel, models.Model):
 
     def __str__(self):
         return self.name_list
+
+# class HistoryEdit(models.Model):
+#     descriptor_edit = models.TextField(verbose_name='Название сайта', max_length=20)
+#     descriptor_website = models.TextField(verbose_name='Описание сайта', max_length=50)
+#     name_list = 'Настройки конфигурации'
+#
+#     def settingsSave(self):
+#         self.save()
+#
+#     def __str__(self):
+#         return self.name_list

@@ -5,20 +5,32 @@
 <head>
     <meta property="og:title" content="Тестовый блог"/>
 
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 
     <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
     <script src="{% static 'js/share.js' %}"></script>
     <script src="{% static 'js/yandex_metrika.js' %}"></script>
+    <script src="{% static 'js/blog.js' %}"></script>
 
     <title>{{ settings_page.name_website }}</title>
 </head>
 <body>
 <div class="container">
     {{ settings }}
+<div class="alert alert-danger">
+    <strong>Внимание! Сайт находится в стадии разработки!</strong>
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+</div>
+<div class="alert alert-warning">
+    <strong>Внимание! Сайт носит развлекательный характер!</strong>
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+</div>
+
     <a href="/"><h1>Блог Клинова Михаила Сергеевича</h1></a>
 
     {% block content %}
