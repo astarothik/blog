@@ -26,24 +26,24 @@
     {% for comment in post.comments.all %}
         {% if user.is_authenticated or comment.approved_comment %}
             <div class="panel post detail_comment ">
-                <p>Высказывание от:{{ comment.created_date }}</p>
-                <p>Автор: {{ comment.author }}</p>
-                <p>{{ comment.text|linebreaks }}</p>
-                {% if not comment.approved_comment %}
-                    <p>
-                        Решение по данному высказыванию
-                    </p>
-                    <p>
-                        <a class="btn btn-danger" href="{% url 'comment_remove' pk=comment.pk %}">
-                            <span class="glyphicon glyphicon-remove"></span>
-                            Расстрелять
-                        </a>
-                        <a class="btn btn-success" href="{% url 'comment_approve' pk=comment.pk %}">
-                            <span class="glyphicon glyphicon-ok"></span>
-                            Предать гласности
-                        </a>
-                    </p>
-                {% endif %}
+                <div class="panel-body">Высказывание от:{{ comment.created_date }} | Автор: {{ comment.author }}</div>
+                <div class="panel-footer"><p>{{ comment.text|linebreaks }}</p>
+                    {% if not comment.approved_comment %}
+                        <p>
+                            Решение по данному высказыванию
+                        </p>
+                        <p>
+                            <a class="btn btn-danger" href="{% url 'comment_remove' pk=comment.pk %}">
+                                <span class="glyphicon glyphicon-remove"></span>
+                                Расстрелять
+                            </a>
+                            <a class="btn btn-success" href="{% url 'comment_approve' pk=comment.pk %}">
+                                <span class="glyphicon glyphicon-ok"></span>
+                                Предать гласности
+                            </a>
+                        </p>
+                    {% endif %}
+                </div>
             </div>
         {% endif %}
     {% empty %}
