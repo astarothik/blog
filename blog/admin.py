@@ -10,6 +10,7 @@ class PostAdmin(admin.ModelAdmin):
     fieldsets = (
         ('', {
             'fields': (
+                'author',
                 'title',
                 'text',
             ),
