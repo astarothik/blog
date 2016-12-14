@@ -88,3 +88,7 @@ p {
 .container {
     margin-bottom: 50px;
 }
+
+.alert {
+	opacity: 0.8
+}
