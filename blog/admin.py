@@ -13,6 +13,8 @@ class PostAdmin(admin.ModelAdmin):
                 'author',
                 'title',
                 'text',
+                'created_date',
+                'published_date',
             ),
         }),
     )
