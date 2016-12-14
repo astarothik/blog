@@ -2,7 +2,7 @@ body {
     background: #24b060;
 }
 
-h2, h1 {
+h2, h1, .footer {
     color: darkred;
 }
 
@@ -67,4 +67,12 @@ p {
     display: flex;
     flex-direction: column;
     text-align: center;
+    clear: both;
+    position: absolute;
+    bottom: 0;
+
+}
+.block-footer {
+    display: flex;
+    justify-content: center;
 }
