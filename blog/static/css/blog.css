@@ -69,7 +69,8 @@ p {
     text-align: center;
     clear: both;
     bottom: 0;
-    color: #fefefe
+    color: #fefefe;
+    padding: 15px;
 
 }
 
@@ -83,5 +84,5 @@ p {
     background: #333;
     clear: both;
     position: fixed;
-    margin-top: auto;
+    margin-top: 50px;
 }
