@@ -97,6 +97,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
 .modal-content {
     width: 500px;
