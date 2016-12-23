@@ -71,7 +71,6 @@ p {
     bottom: 0;
     color: #fefefe;
     padding: 5px;
-
 }
 
 .block-footer {
@@ -85,10 +84,27 @@ p {
     clear: both;
     position: fixed;
 }
+
 .container {
     margin-bottom: 50px;
 }
 
 .alert {
-	opacity: 0.8
+    opacity: 0.8
 }
+.modal-dialog {
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    width: 500px;
+}
+/*.list-post {*/
+    /*background: #fff;*/
+    /*filter: blur(1px);*/
+/*}*/
+/*.list-post>* {*/
+    /*filter: blur(0px);*/
+/*}*/

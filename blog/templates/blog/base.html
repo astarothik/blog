@@ -26,6 +26,27 @@
     <title>{{ settings_page }}</title>
 </head>
 <body>
+
+    <div class="modal fade" id="myModal" role="dialog" tabindex="-1">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Внимание!</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Понравилась заметка? Поделись ей в социальных сетях!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
 <div class="container">
     {{ settings_page }}
     <div class="alert alert-danger">
@@ -45,6 +66,7 @@
 
 </div>
 {% include 'blog/footer.html' %}
+
 <noscript>
     <div>
         <img src="https://mc.yandex.ru/watch/41528589" style="position:absolute; left:-9999px;" alt=""/>
