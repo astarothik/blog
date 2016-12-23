@@ -27,25 +27,29 @@
 </head>
 <body>
 
-    <div class="modal fade" id="myModal" role="dialog" tabindex="-1">
-        <div class="modal-dialog">
+<div class="modal fade" id="myModal" role="dialog" tabindex="-1">
+    <div class="modal-dialog">
 
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Внимание!</h4>
-                </div>
-                <div class="modal-body">
-                    <p>Понравилась заметка? Поделись ей в социальных сетях!</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Внимание!</h4>
+            </div>
+            <div class="modal-body">
+                <p>Понравилась заметка? Надеюсь ты не забудешь поделиться ей в социальных сетях!</p>
+                <div class="ya-share2"
+                     data-services="vkontakte,facebook,odnoklassniki,gplus,twitter,viber,whatsapp,skype,telegram"
+                     data-limit="3">
                 </div>
             </div>
-
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
+            </div>
         </div>
+
     </div>
+</div>
 
 <div class="container">
     {{ settings_page }}

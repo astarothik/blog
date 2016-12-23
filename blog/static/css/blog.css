@@ -98,14 +98,9 @@ p {
     justify-content: center;
     align-items: center;
     height: 100%;
+    margin: auto;
 }
 .modal-content {
     width: 500px;
+    text-align: center;
 }
-/*.list-post {*/
-    /*background: #fff;*/
-    /*filter: blur(1px);*/
-/*}*/
-/*.list-post>* {*/
-    /*filter: blur(0px);*/
-/*}*/
